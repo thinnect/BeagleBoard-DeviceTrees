@@ -248,7 +248,9 @@
 
 &usb0 {
 	status = "okay";
-	dr_mode = "peripheral";
+	/*dr_mode = "peripheral";*/
+	/* PuG uses this USB bus as a host */
+	 dr_mode = "host";
 	interrupts-extended = <&intc 18 &tps 0>;
 	interrupt-names = "mc", "vbus";
 };
