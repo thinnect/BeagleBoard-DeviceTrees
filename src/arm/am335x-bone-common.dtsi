@@ -525,4 +525,13 @@
 		};
 
 	};
+
+	/* 
+	Enable GPIO 0 27 (P8.17) as one-wire to talk to the 12->5V converter on a
+	battery-powered PuG. Conflicts with SIM selection (on 16 first PuG boards). 
+	*/
+	onewire {
+		compatible = "w1-gpio";
+		gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
+	};
 };
